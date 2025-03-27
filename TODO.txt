@@ -1,0 +1,4 @@
+[ ] finish implementation of external links, currently only in people page: cf. https://github.com/wowchemy/wowchemy-hugo-themes/pull/1644/files#diff-682d039ad19b49885377c68af9f9558c576f20da360442b390ccec52a8c93d43
+[ ] auto extract bibtex:
+https://api.archives-ouvertes.fr/search/?q=structId_i:(1124151%20OR%20246190)&wt=bibtex&start=0&rows=5000
+also check: https://github.com/wowchemy/hugo-academic-cli

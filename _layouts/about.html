@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+<!-- about.html -->
+      <div class="post">
+        <header class="post-header">
+          <h1 class="post-title">
+           {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
+          </h1>
+          <p class="desc">{{ page.subtitle }}</p>
+        </header>
+
+        <article>
+          {% if page.profile -%}
+          <div class="profile align-center">
+            {%- if page.profile.image %}
+              {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
+
+              {% if page.profile.image_circular %}
+                {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle center" -%}
+              {% else %}
+                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
+              {% endif %}
+
+              {% include figure.html 
+              path=profile_image_path 
+              class=profile_image_class
+              alt=page.profile.image -%}
+              {%- if page.profile.image_date %}
+                <div class="profile imgdate">{{page.profile.image_date}}</div>
+              {%- endif %}
+            {% endif -%}
+          </div>
+          {%- endif %}
+
+          <div class="team-description">
+            {{ page.description | markdownify }}
+          </div>
+
+          {% if page.researches -%}
+          <!-- Researches -->
+          <div class="research">
+            <!-- <h2>Research themes</h2> -->
+            <div class="axes">
+            {% for axis in site.data.axes %}
+              <article>
+                  <a href="{{ '/research/' | relative_url }}#{{ axis.slurm }}">
+                    {% assign im_path = axis.img | prepend: '/assets/img/' %}
+                  <img src="{{ im_path | size: 250 | relative_url }}" alt="" />
+                  <div class="title">{{ axis.name }}</div> 
+                  </a>
+              </article>
+            {% endfor %}
+            </div>
+          </div>
+          {%- endif %}
+
+          {% if page.news -%}
+          <!-- News -->
+          {%- include news.html %}
+          {%- endif %}
+          {% if page.selected_papers -%}
+            <!-- Selected papers -->
+            {%- include selected_papers.html %}
+          {%- endif %}
+          {%- if page.social %}
+          <!-- Social -->
+          <div class="social">
+            <div class="contact-icons">
+            {% include social.html %}
+            </div>
+
+            <div class="contact-note">
+              {{ site.contact_note }}
+            </div>
+            
+          </div>
+          {%- endif %}
+        </article>
+<!--             {%- if page.profile.address %}
+            <div class="address">
+              {{ page.profile.address }}
+            </div>
+            {%- endif %}
+ -->
+</div>

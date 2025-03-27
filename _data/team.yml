@@ -1,0 +1,404 @@
+# Positions are *CASE SENSITIVE*:
+# - "Head" (team heads)
+# - "Administrative" (assistant, project managers, etc.)
+# - "Researcher"
+# - "Visitor" (research visitors)
+# - "Postdoctoral"
+# - "Engineer"
+# - "PhD"
+# - "Intern"
+
+# By default, all members are displayed by alphabetical order of the last name.
+# For "Head" members, the special property "order" overrides the display order.
+
+# For switching someone to alumni, just set the "alumni" property. Eg:
+# alumni: true
+
+-
+    firstname: "Karim"
+    lastname: "Essalmi"
+    profilepic: "karim-essalmi.jpg"
+    position: "PhD"
+    url: "https://scholar.google.fr/citations?user=62gLmEwAAAAJ"
+
+-
+    firstname: "Raoul"
+    lastname: "de Charette"
+    profilepic: "raoul-de-charette.jpg"
+    position: "Researcher"
+    url: "https://rdecharette.github.io"
+
+-
+    firstname: "Patrick"
+    lastname: "Pérez"
+    profilepic: "patrick-perez.jpg"
+    position: "Researcher"
+    url: ""
+    url: https://ptrckprz.github.io/
+    alumni: true
+    alumni_date: 2023-11-01
+    alumni_now: "CEO of Kyutai"
+
+-
+    firstname: "Fawzi"
+    lastname: "Nashashibi"
+    profilepic: "fawzi-nashashibi.jpg"
+    position: "Head"
+    position_custom: "Inria team leader"
+    order: 1
+    url: "./fawzi-nashashibi"
+
+-
+    firstname: "Tetiana"
+    lastname: "Martyniuk"
+    profilepic: "tetiana-martyniuk.jpg"
+    position: "PhD"
+    url: https://scholar.google.com/citations?user=Ur0vgfMAAAAJ
+
+-
+    firstname: "Amina"
+    lastname: "Ghoul"
+    profilepic: "amina-ghoul.jpg"
+    position: "PhD"
+    url: "https://scholar.google.com/citations?user=3daSu5UAAAAJ"
+    alumni: true
+    alumni_date: 2025-02-01
+
+-
+    firstname: "Gérard"
+    lastname: "Le Lann"
+    profilepic: "gerard-le-lann.jpg"
+    position: "Researcher"
+    position_custom: "Researcher Emeritus"
+    url: "https://www.linkedin.com/in/gerard-le-lann-85b0837/"
+
+-
+    firstname: "Martial"
+    lastname: "Le-Henaff"
+    profilepic: "martial-henaff.jpeg"
+    position: "Administrative"
+    position_custom: "Team Assistant"
+    url: ""
+
+-
+    firstname: "Anne"
+    lastname: "Mathurin"
+    profilepic: "anne-mathurin.jpg"
+    position: "Administrative"
+    position_custom: "Team Assistant"
+    alumni: true
+    url: "https://www.annemathurin.com/"
+    alumni_date: 2024-06-01
+
+-
+    firstname: "Andrei"
+    lastname: "Bursuc"
+    profilepic: "andrei-bursuc.jpg"
+    position: "Researcher"
+    url: https://abursuc.github.io/
+    parttime: true
+
+-
+    firstname: "Anne-Verroust"
+    lastname: "Blondet"
+    profilepic: "anne-verroust-blondet.jpg"
+    position: "Researcher"
+    url: "https://who.rocq.inria.fr/Anne.Verroust/"
+    alumni: true
+    alumni_date: 2023-06-01
+    alumni_now: "retired"
+
+-
+    firstname: "Tuan-Hung"
+    lastname: "Vu"
+    profilepic: "tuan-hung-vu.jpg"
+    position: "Researcher"
+    url: https://tuanhungvu.github.io/
+    parttime: true
+
+-
+    firstname: "Axel"
+    lastname: "Jeanne"
+    profilepic: "axel-jeanne.jpg"
+    position_custom: "Research Engineer"
+    position: "Researcher"
+    url: "https://www.linkedin.com/in/axeljeanne/"
+    parttime: true
+
+-
+    firstname: "Zayed"
+    lastname: "Alsayed"
+    profilepic: "zayed-alsayed.jpg"
+    position_custom: "Research Engineer"
+    position: "Researcher"
+    url: "https://scholar.google.fr/citations?user=z65GtlQAAAAJ"
+    parttime: true
+
+-
+    firstname: "Nelson"
+    lastname: "de Moura"
+    profilepic: "nelson-de-moura.jpg"
+    position: "Postdoctoral"
+    url: ""
+    alumni: true
+    alumni_date: 2024-12-01
+
+-
+    firstname: "Souhaiel"
+    lastname: "Ben Salem"
+    profilepic: "souhaiel-ben-salem.jpg"
+    position: "Intern"
+    url: https://www.linkedin.com/in/souhaiel-bensalem-5a71721aa
+    alumni: true
+    alumni_date: 2024-03-01
+
+-
+    firstname: "Gilles"
+    lastname: "Puy"
+    profilepic: "gilles-puy.jpg"
+    position: "Researcher"
+    url: https://sites.google.com/site/puygilles/
+    parttime: true
+
+-
+    firstname: "Noël"
+    lastname: "Nadal"
+    profilepic: "noel-nadal.jpg"
+    position: "PhD"
+    url: "https://www.linkedin.com/in/noelnadal/"
+
+-
+    firstname: "Alexandre"
+    lastname: "Boulch"
+    profilepic: "alexandre-boulch.jpg"
+    position: "Researcher"
+    url: https://boulch.eu/
+    parttime: true
+
+-
+    firstname: "Renaud"
+    lastname: "Poncelet"
+    profilepic: "renaud-poncelet.jpg"
+    position: "PhD"
+    url: "https://renaudponcelet.zetmus.fr/"
+    alumni: true
+    alumni_date: 2022-12-01
+
+-
+    firstname: "Paulo"
+    lastname: "Resende"
+    profilepic: "paulo-resende.jpg"
+    position_custom: "Research Engineer"
+    position: "Researcher"
+    url: "https://fr.linkedin.com/in/pauloclresende"
+    parttime: true
+
+-
+    firstname: "Guy"
+    lastname: "Fayolle"
+    profilepic: "guy-fayolle.jpg"
+    position: "Researcher"
+    position_custom: "Researcher Emeritus"
+    url: ""
+
+-
+    firstname: "Jiahao"
+    lastname: "Zhang"
+    profilepic: "jiahao-zhang.jpg"
+    position: "PhD"
+    url: ""
+    alumni: true
+    alumni_date: 2024-12-13
+
+-
+    firstname: "Tan Khiem"
+    lastname: "Huynh"
+    profilepic: "tan-khiem-huynh.jpg"
+    position: "Intern"
+    url: https://www.linkedin.com/in/khiem2105/
+    alumni: true
+    alumni_date: 2023-11-01
+
+-
+    firstname: "Benazouz"
+    lastname: "Bradai"
+    profilepic: "benazouz-bradai.jpg"
+    position: "Head"
+    position_custom: "Valeo team leader"
+    order: 2
+    url: "https://www.linkedin.com/in/dr-benazouz-bradai-9968807"
+
+-
+    firstname: "Jean-Marc"
+    lastname: "Lasgouttes"
+    profilepic: "jean-marc-lasgouttes.jpg"
+    position: "Researcher"
+    url: "https://who.rocq.inria.fr/Jean-Marc.Lasgouttes/"
+
+-
+    firstname: "Mohammad"
+    lastname: "Fahes"
+    profilepic: "mohammad-fahes.jpg"
+    position: "PhD"
+    url: https://mfahes.github.io/
+
+-
+    firstname: "Fernando"
+    lastname: "Garrido Carpio"
+    profilepic: "fernando-garrido-carpio.jpg"
+    position_custom: "Research Engineer"
+    position: "Researcher"
+    url: "https://www.linkedin.com/in/fernandogarridocarpio/"
+    parttime: true
+
+-
+    firstname: "Anh-Quan"
+    lastname: "Cao"
+    profilepic: "anh-quan-cao.jpg"
+    position: "PhD"
+    url: https://anhquancao.github.io/
+    alumni: true
+    alumni_date: 2025-01-01
+
+-
+    firstname: "Renaud"
+    lastname: "Marlet"
+    profilepic: "renaud-marlet.jpg"
+    position: "Researcher"
+    url: http://imagine.enpc.fr/~marletr/
+    parttime: true
+
+-
+    firstname: "Ivan"
+    lastname: "Lopes"
+    profilepic: "ivan-lopes.jpg"
+    position: "PhD"
+    url: https://wonjunior.github.io/
+
+-
+    firstname: "Elias"
+    lastname: "Maharmeh"
+    profilepic: "elias-maharmeh.png"
+    position: "PhD"
+    url: "https://scholar.google.com/citations?user=RY7aM_0AAAAJ"
+
+-
+    firstname: "Islem"
+    lastname: "Kobbi"
+    profilepic: "islem-kobbi.jpeg"
+    position: "PhD"
+    url: "https://www.linkedin.com/in/islem-kobbi/"
+
+-
+    firstname: "Fabio"
+    lastname: "Pizzati"
+    profilepic: "fabio-pizzati.jpg"
+    url: https://fabvio.github.io/
+    position: "PhD"
+    alumni: true
+    alumni_date: 2023-03-01
+    alumni_now: "Postdoc at MBZUAI"
+
+-
+    firstname: "Clotilde"
+    lastname: "Monnet"
+    profilepic: "clotilde-monnet.jpg"
+    position: "Administrative"
+    position_custom: "Project Manager"
+    url: ""
+    alumni: true
+    alumni_date: 2025-03-01
+
+-
+    firstname: "Tiago"
+    lastname: "Goncalves Rocha"
+    profilepic: "tiago-goncalves-rocha.jpg"
+    position_custom: "Research Engineer"
+    position: "Researcher"
+    url: "https://tiagorochag.github.io/"
+    alumni_now: "Valeo"
+    parttime: true
+
+-
+    firstname: "Hussam"
+    lastname: "Atoui"
+    profilepic: "hussam-atoui.jpg"
+    position_custom: "Research Engineer"
+    position: "Researcher"
+    url: "https://scholar.google.com/citations?user=ieyZltcAAAAJ"
+    parttime: true
+
+-
+    firstname: "Paul"
+    lastname: "Roger-Dauvergne"
+    profilepic: "paul_rogerdauvergne.jpeg"
+    position: "Engineer"
+    url: "https://www.linkedin.com/in/paul-roger-dauvergne/"
+
+-
+    firstname: "Yasser"
+    lastname: "Benigmim"
+    profilepic: "benigmim_yasser.jpg"
+    position: "PhD"
+    position_custom: "PhD Intern"
+    url: https://yasserben.github.io/
+
+- 
+    firstname: "Clément"
+    lastname: "Weinreich"
+    url: https://clement-w.github.io/
+    profilepic: clement_weinreich.jpeg
+    position: Intern
+    alumni: true
+    alumni_date: 2024-09-01
+    alumni_now: PhD at CNRS, Institut Pasteur, Harvard
+
+-
+    firstname: Matteo
+    lastname: "Marengo"
+    url: https://www.linkedin.com/in/matteolmarengo/
+    profilepic: matteo_marengo.jpeg
+    alumni: true
+    alumni_date: 2024-09-01
+    position: Intern
+    alumni_now: Research intern at <a href="https://hms.harvard.edu/" target="_blank">Harvard</a>
+
+
+-
+    firstname: Soumava
+    lastname: "Paul"
+    url: https://mvp18.github.io/
+    profilepic: soumava_paul.jpg
+    position: Intern
+
+-
+    firstname: Weihao
+    lastname: "Xia"
+    url: https://weihaox.github.io/
+    profilepic: weihao_xia.png
+    position: Intern
+    position_custom: PhD Intern
+    alumni: true
+    alumni_date: 2024-09-01
+
+-
+    firstname: Fatima
+    lastname: Balde
+    url: https://www.linkedin.com/in/fatima-balde-146312220/
+    profilepic: fatima_balde.jpg
+    position: Intern
+
+-
+    firstname: Jonathan
+    lastname: Seele
+    url: https://www.linkedin.com/in/jonathan-seele-913691253/
+    profilepic: jonathan_seele.jpg
+    position: Intern
+
+-
+    firstname: Iyad
+    lastname: Abuhadrous
+    url: https://www.linkedin.com/in/iyad-ayoub/
+    profilepic: iyad-abuhadrous.png
+    position: Visitor
+    position_custom: "Visitor Researcher"

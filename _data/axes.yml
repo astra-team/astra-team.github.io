@@ -1,0 +1,33 @@
+- 
+  slurm: vision
+  name: Robust Visual Scene Understanding
+  img: research/axis_astra-vision.png
+  description: >
+    We focus on developing advanced algorithms for multimodal scene understanding. In particular, we seek to learn with less supervision by relying on large foundation models, generative models, or physics-driven models. A focus is to enhance the robustness of vision algorithms to perform well in complex conditions, such as adverse weather or poor lighting. This includes improving perception capabilities in scenarios like snowstorms, fog, or nighttime driving. By utilizing multi-modal sensor data (e.g., combining images and LiDAR), the team aims to create a comprehensive 3D understanding of the environment that supports safe and reliable navigation. <a href="https://astra-vision.github.io/">Astra-Vision page</a>
+
+- 
+  slurm: localization
+  name: Localization and Mapping
+  img: research/axis_localization.jpg
+  description: >
+    Precise localization and mapping are key pillars of autonomous vehicle perception, enabling the vehicle to understand its position within the environment. 
+    Our research focuses on developing advanced methods for localization integrity, utilizing techniques like Fault Detection and Isolation (FDI) and Protection Levels (PL) to ensure that the localization systems are reliable and robust against sensor errors and environmental anomalies. The team also works on aligning multiple map layers from different sources, such as those provided by LiDAR, cameras, and third-party map services. This alignment allows for the integration of diverse datasets into a cohesive and accurate map, which is critical for advanced driver assistance systems (ADAS).
+    Further we rely on georeferencing maps without the need for expensive technologies like RTK GNSS and high-grade IMUs. By leveraging standard sensors such as GNSS, IMUs, LiDAR, and cameras, ASTRA aims to build high-precision maps using asynchronous sensor fusion techniques. This approach seeks to reduce costs while maintaining high localization accuracy, making it more accessible for large-scale deployment.
+
+- 
+  slurm: decision
+  name: Decision Making and Vehicle Control
+  img: research/axis_decision.jpg
+  description: >
+    Decision-making, motion planning, and vehicle control are critical components of any autonomous driving system. We address the challenge of designing decision-making systems that are capable of responding to dynamic environments, accounting for factors such as uncertainties in perception data, occlusions, and the unpredictable behaviors of other road users.
+    The research in this area covers several key topics. First, the team focuses on maneuver and trajectory prediction, developing models that can forecast the future movements of surrounding traffic participants, including vehicles, pedestrians, and cyclists. These predictions are essential for safe and comfortable autonomous driving. ASTRA employs a variety of techniques, from physics-based models to advanced machine learning approaches, to enhance the accuracy and reliability of these predictions.
+    The team also explores decision-making schemes for the ego-vehicle, ensuring that it can make optimal decisions based on safety, comfort, energy efficiency, and compliance with traffic rules. This involves creating unified architectures that integrate both decision-making and motion planning, leveraging techniques such as reinforcement learning, inverse reinforcement learning, and optimization-based methods. Finally, the team works on robust vehicle control, ensuring that the planned trajectories are executed safely and smoothly, taking into account vehicle dynamics and environmental constraints.
+
+- 
+  slurm: modeling
+  name: Large-Scale Mobility Systems
+  img: research/axis_modeling.jpg
+  description: >
+    Large-scale deployment and modeling of mobility systems in urban environments focuse on the cooperation between autonomous vehicles and the infrastructure. This research is crucial as autonomous vehicles become more common, requiring efficient traffic management and interaction with smart city infrastructures.
+    We explore the modeling of large-scale systems involving numerous connected vehicles, often using approaches inspired by statistical physics. These models help simulate and predict traffic behavior at both the microscopic (individual vehicle interactions) and macroscopic (overall traffic flow) levels. The team aims to identify and address bottlenecks in traffic, reduce congestion, and optimize fleet management for autonomous vehicle systems.
+    A key focus of this research is on cooperative automated driving, where vehicles communicate with each other and the infrastructure through V2X (Vehicle-to-Everything) technology. This enables real-time information sharing, allowing vehicles to collaborate on tasks like maneuver coordination and traffic regulation. The research also investigates crowdsourced mapping, where data from multiple vehicles is used to create and update high-definition maps that support accurate localization in complex environments.

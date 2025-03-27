@@ -1,0 +1,36 @@
+{% assign member =  include.member %}
+
+{%- assign full_name = member.firstname | append: " " | append: member.lastname -%}
+{% assign pic_path = member.profilepic | prepend: '/assets/img/team/' %}
+{% assign file = site.static_files | where: "path", pic_path | first %}
+{%- if member.profilepic != "" and file -%}
+{%- assign pic_path = pic_path -%}
+{%- else -%}
+{%- assign pic_path = "anonymous.jpg" | prepend: '/assets/img/team/' -%}
+{%- endif -%}
+
+
+<div class="member text-center {{member.position}}">
+  {% if member.url and member.url != "" %}
+  <a href="{{ member.url }}" target="_blank">
+  {% endif %}
+
+  <img class="member-img-light w-100" alt="{{ full_name }}" src="{{ pic_path | size: 250 | relative_url }}">
+  {{ full_name }}
+  {% if member.url and member.url != "" %}
+  </a>
+  {% endif %}
+  <br>
+  <span class="status">
+  {% if member.position_custom %}
+    {{ member.position_custom }}
+  {% else %}
+    {{ member.position }}
+  {% endif %}
+  {% if member.alumni == true %}
+    {% if member.alumni_now != nil %}
+      <br> <span class="nowat">(now {{member.alumni_now}})</span>
+    {% endif %}
+  {% endif %}
+  </span>
+</div>
