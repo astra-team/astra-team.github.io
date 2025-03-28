@@ -102,7 +102,7 @@ contact_note: >
 # Analytics and search engine verification
 # -----------------------------------------------------------------------------
 
-google_analytics: # your Goole Analytics measurement ID (format: G-XXXXXXXXXX)
+google_analytics: G-SEG417DYFJ # your Goole Analytics measurement ID (format: G-XXXXXXXXXX)
 panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 
 google_site_verification: EaOBAFJS2oZAhYIqcnG58x5_a5rmawbEfR2m7fBQRSk # your google-site-verification ID (Google Search Console)
