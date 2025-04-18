@@ -67,45 +67,66 @@
               {%- endif -%}
             {%- endif -%}
 
+            <!-- Check if author is member of the team or coauthor !-->
+            <!-- the process loops on a range [0,1] where 0 is members of the team, 1 is coauthors !-->
             {%- assign teammember_url = nil -%}
-            {%- for member in site.data.team -%}
-              {% if member.url and member.url != ""%}
-                {% assign last_name_variations = "" | split: ',' %}
-                {% assign first_name_variations = "" | split: ',' %}
+            {% assign range_array = "0,1" | split: "," %}
+            {% for item in range_array %}
+              {% if forloop.index0 == 0 %}
+                {% assign people_array = site.data.team %}
+              {% elsif forloop.index0 == 1 %}
+                {% assign people_array = site.data.coauthors %}
+              {% endif %}
 
-                {% assign first_name_variations = first_name_variations | push: member.firstname %}
-                {% assign last_name_variations = last_name_variations | push: member.lastname %}
+              {% assign author_member = nil %}
+              {%- for member in people_array -%}
+                {% if member.url and member.url != ""%}
+                  {% assign last_name_variations = "" | split: ',' %}
+                  {% assign first_name_variations = "" | split: ',' %}
 
-                {% assign lastname = member.lastname | slice: 0, 3 %}
-                {% if lastname == "de " %}
-                  {% assign variation = member.lastname | slice: 3, 99999 %}
-                  {% assign last_name_variations = last_name_variations | push: variation %}
-                {% endif %}
+                  {% assign first_name_variations = first_name_variations | push: member.firstname %}
+                  {% assign last_name_variations = last_name_variations | push: member.lastname %}
 
-                <!-- Converting arrays to lower case !-->
-                {% assign lower_array = "" | split: "" %}
-                {% for item in first_name_variations %}
-                  {% assign lower_item = item | downcase %}
-                  {% assign lower_array = lower_array | push: lower_item %}
-                {% endfor %}
-                {% assign first_name_variations = lower_array %}
+                  {% assign lastname = member.lastname | slice: 0, 3 %}
+                  {% if lastname == "de " %}
+                    {% assign variation = member.lastname | slice: 3, 99999 %}
+                    {% assign last_name_variations = last_name_variations | push: variation %}
+                  {% endif %}
 
-                {% assign lower_array = "" | split: "" %}
-                {% for item in last_name_variations %}
-                  {% assign lower_item = item | downcase %}
-                  {% assign lower_array = lower_array | push: lower_item %}
-                {% endfor %}
-                {% assign last_name_variations = lower_array %}
-                <!-- Converting arrays to lower case !-->
+                  <!-- Converting arrays to lower case !-->
+                  {% assign lower_array = "" | split: "" %}
+                  {% for item in first_name_variations %}
+                    {% assign lower_item = item | downcase %}
+                    {% assign lower_array = lower_array | push: lower_item %}
+                  {% endfor %}
+                  {% assign first_name_variations = lower_array %}
 
-                {% assign author_first = author.first | downcase %}
-                {% assign author_last = author.last | downcase %}
-                {%- if first_name_variations contains author_first and last_name_variations contains author_last -%}
-                  {%- assign teammember_url = member.url -%}
-                  {%- break -%}
+                  {% assign lower_array = "" | split: "" %}
+                  {% for item in last_name_variations %}
+                    {% assign lower_item = item | downcase %}
+                    {% assign lower_array = lower_array | push: lower_item %}
+                  {% endfor %}
+                  {% assign last_name_variations = lower_array %}
+                  <!-- Converting arrays to lower case !-->
+
+                  {% assign author_first = author.first | downcase %}
+                  {% assign author_last = author.last | downcase %}
+                  {%- if first_name_variations contains author_first and last_name_variations contains author_last -%}
+                    {%- assign author_member = member -%}
+                    {%- break -%}
+                  {%- endif -%}
                 {%- endif -%}
-              {%- endif -%}
-            {%- endfor -%}
+              {%- endfor -%}
+
+              {% if author_member != nil %}
+                {% if forloop.index0 == 0 %}
+                  {% assign teammember_url = author_member.url %}
+                {% elsif forloop.index0 == 1 %}
+                  {% assign coauthor_url = author_member.url %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            <!-- Check if author is member of the team (END) or coauthor !-->
             
             {%- if forloop.length > 1 -%}
               {%- if forloop.first == false -%},&nbsp;{%- endif -%}
